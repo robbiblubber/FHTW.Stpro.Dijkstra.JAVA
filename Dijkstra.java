@@ -9,7 +9,7 @@ public class Dijkstra
     public static int[] getPath(int[][] graph, int start, int end)
     {
         int[][] dist = new int[graph.length][2];                                // distances: dist[node][0] => distance to start; dist[node][1] => final?
-                                                                                // initialize, every node is far away and tentative
+        // initialize, every node is far away and tentative
         for(int i = 0; i < graph.length; i++) { dist[i][0] = Integer.MAX_VALUE; dist[i][1] = 0; }
         dist[start][0] = 0; dist[start][1] = 1;                                 // start node is final
 
@@ -60,7 +60,7 @@ public class Dijkstra
         return rval;                                                            // return the result
     }
 
-    
+
     /** Dumps the distance array.
      * @param v Distance array. */
     public static void dump(int[][] v)
